@@ -36,8 +36,8 @@ message GetOrderResponse {
 }
 
 message ListOrdersRequest {
-  string user_id = 1;      // Можно фильтровать по пользователю
-  int32 limit = 2;         // Пагинация
+  int64 order_id = 1;
+  int32 limit = 2;
   int32 offset = 3;
 }
 
