@@ -21,7 +21,7 @@ message OrderCreateRequest {
 
 message OrderCreateResponse {
   bool is_success = 1;
-  string order_id = 2;
+  int64 order_id = 2;
   string error_message = 3;
 }
 
