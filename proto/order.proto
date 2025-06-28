@@ -16,7 +16,7 @@ message OrderCreateRequest {
   string name = 1;
   string size = 2;
   int32 price = 3;
-  string user_id = 4;
+  int64 user_id = 4;
 }
 
 message OrderCreateResponse {
@@ -58,7 +58,7 @@ message UpdateOrderResponse {
 }
 
 message DeleteOrderRequest {
-  string order_id = 1;
+  int64 order_id = 1;
 }
 
 message DeleteOrderResponse {
@@ -67,9 +67,9 @@ message DeleteOrderResponse {
 }
 
 message Order {
-  string order_id = 1;
+  int64 order_id = 1;
   string name = 2;
   string size = 3;
   int32 price = 4;
-  string user_id = 5;
+  int64 user_id = 5;
 }
