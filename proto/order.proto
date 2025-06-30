@@ -16,17 +16,17 @@ message OrderCreateRequest {
   string name = 1;
   string size = 2;
   int32 price = 3;
-  int64 user_id = 4;
+  string user_id = 4;
 }
 
 message OrderCreateResponse {
   bool is_success = 1;
-  int64 order_id = 2;
+  string order_id = 2;
   string error_message = 3;
 }
 
 message GetOrderRequest {
-  int64 order_id = 1;
+  string order_id = 1;
 }
 
 message GetOrderResponse {
@@ -36,7 +36,7 @@ message GetOrderResponse {
 }
 
 message ListOrdersRequest {
-  int64 order_id = 1;
+  string order_id = 1;
   int32 limit = 2;
   int32 offset = 3;
 }
@@ -46,7 +46,7 @@ message ListOrdersResponse {
 }
 
 message UpdateOrderRequest {
-  int64 order_id = 1;
+  string order_id = 1;
   string name = 2;
   string size = 3;
   int32 price = 4;
@@ -58,7 +58,7 @@ message UpdateOrderResponse {
 }
 
 message DeleteOrderRequest {
-  int64 order_id = 1;
+  string order_id = 1;
 }
 
 message DeleteOrderResponse {
@@ -67,9 +67,9 @@ message DeleteOrderResponse {
 }
 
 message Order {
-  int64 order_id = 1;
+  string order_id = 1;  // Изменено с int64 на string
   string name = 2;
   string size = 3;
   int32 price = 4;
-  int64 user_id = 5;
+  string user_id = 5;   // Изменено с int64 на string
 }
